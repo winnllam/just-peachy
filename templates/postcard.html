@@ -1,9 +1,151 @@
 <html>
   <head>
+    <title>Postcard</title>
+
+    <style>
+      html {
+        margin: 0;
+        overflow: hidden;
+      }
+      body {
+        margin: 0;
+        background-image: url("../static/grid.png");
+        background-repeat: repeat;
+      }
+
+      @font-face { font-family: Codystar; src: url('../static/Codystar/Codystar-Regular.ttf');}
+      @font-face { font-family: DancingScript; src: url('../static/Dancing_Script/DancingScript-Regular.ttf');}
+      @font-face { font-family: Caveat; src: url('../static/Caveat/Caveat-Regular.ttf');}
+
+      h1 {
+        font-family: Codystar;
+        font-size: 80px;
+      }
+
+      h2 {
+        font-family: DancingScript;
+        font-size: 25px;
+      }
+
+      p {
+        font-family: Caveat;
+        font-size: 20px;
+        margin: 0;
+      }
+
+      #main { /*post card*/
+        width: 850px;
+        height: 475px;
+        border: 2px solid gray;
+        border-radius: 30px;
+        margin: 0 auto;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        overflow: auto;
+        overflow-x: hidden;
+      }
+
+      #address { /*right side bar*/
+        position: absolute;
+        margin: 0;
+        left: 650px;
+        width: 200px;
+        height: 100%;
+        background-color: #D8F1FF;
+        text-align: center;
+        overflow: scroll;
+      }
+      #pic { /*user image*/
+        width: 135px;
+        height: auto;
+        margin: 30px 32px;
+        border: dotted 2px;
+        color: white;
+      }
+      .links {
+        background-color: #A3DDFC;
+        height: 25px;
+        width: 100px;
+        border: dotted 2px;
+        border-style: outset;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 11px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      #header {
+        position: absolute;
+        width: 610px;
+        height: 60px;
+        padding: 20px;
+        background-color: #EEFEFF;
+        overflow: block;
+        text-align: center;
+      }
+
+      #text {
+        position: absolute;
+        top: 100px;
+        width: 550px;
+        height: 275px;
+        padding: 50px;
+        background-color: #EEFEFF;
+        overflow: scroll;
+      }
+
+      .cloud {
+        position: absolute;
+        width: 250px;
+        height: auto;
+      }
+
+    </style>
   </head>
 
   <body>
-    <p>Postcard</p>
+    <div style="position:absolute;top:3%;left:25%;">
+      <h1>M A I L</h1>
+    </div>
+
+    <img class="cloud" style="top:70%;left:10%;" src="../static/cloud.png" alt="cloud">
+    <img class="cloud" style="top:85%;" src="../static/cloud.png" alt="cloud">
+    <img class="cloud" style="top:10%;left:90%;" src="../static/cloud.png" alt="cloud">
+    <img class="cloud" style="top:20%;left:75%;" src="../static/cloud.png" alt="cloud">
+
+    <div id="main">
+      <div id="address">
+        <img id="pic" src="../static/icon.png" alt="icon">
+      <!-- add more buttons
+        <button class="links" onclick="window.location.href='LINK HERE'">LINK TITLE</button>
+      -->
+        <button class="links" onclick="window.location.href='/'">Return</button>
+        <button class="links" onclick="window.location.href='https://google.com'">Google</button>
+        <button class="links" onclick="window.location.href='/postcard'">link three</button>
+        <button class="links" onclick="window.location.href='/postcard'">link four</button>
+
+      </div>
+
+      <div id="header">
+        <h2> “Take only memories, leave only footprints.” – Chief Seattle.</h2>
+      </div>
+
+      <div id="text">
+        <p>A postcard themed page for all your travel needs. Send some mail to
+          your loved ones!</p>
+        <br></br>
+        <p>Features:</p>
+        <p>- address (4 links, more can be added)</p>
+        <p>- stamp (change the icon!)</p>
+        <p>- long messages accepted (scroll will automatically appear)</p>
+      </div>
+    </div>
   </body>
 
 </html>
