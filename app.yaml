@@ -1,0 +1,13 @@
+runtime: python27 # what language to use
+threadsafe: true # more than 1 request at once
+
+handlers: # order matters
+- url: /static
+  static_dir: static # directory name
+
+- url: /.* # matches every url // means everything
+  script: main.app
+
+libraries:
+- name: jinja2 # dash indicates a list
+  version: latest
