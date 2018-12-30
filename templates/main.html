@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous">
+
+    <title>Just-Peachy Page Designs</title>
+
+    <style>
+      html {margin: 0;}
+      body {margin: 0;}
+      h1{}
+      h2{}
+
+      .pagebox {
+        width: 80%;
+        height: auto;
+        margin: 7%;
+        padding: 25px;
+        border: 5px solid black;
+        background-color: white;
+        box-shadow: 10px 10px grey;
+        overflow: auto;
+      }
+      .demo { /*page image*/
+        width: 50%;
+        height: auto;
+        float: left;
+      }
+      .demo:hover {
+        opacity: 0.5;
+      }
+      .text { /*page text*/
+        width: 40%;
+        height: auto;
+        float: right;
+      }
+
+      #backdrop {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      #logo_box {
+        position:absolute;
+        top:45%;
+        left:50%;
+        transform:translate(-50%,-50%);
+      }
+      #logo {
+        width:100%;
+        height: auto;
+      }
+      #arrow {
+        position:absolute;
+        top:95%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        font-size: 50px;
+        color: pink;
+      }
+      #grid {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div style="position:relative;">
+      <img id="backdrop" src="../static/white.jpg" alt="bg">
+      <div id="logo_box">
+        <img id="logo" src="../static/logo.png" alt="bg">
+      </div>
+      <i id="arrow" class="fas fa-arrow-circle-down"></i>
+    </div>
+
+    <h1 style="text-align:center;">Selection</h1>
+
+    <div id="grid">
+      <div class="pagebox">
+        <img class="demo" src="../static/wireframe.png" alt="evt" onclick="window.location.href='/postcard'">
+        <div class="text">
+          <h2>Postcard</h2>
+          <p>desc</p>
+        </div>
+      </div>
+
+      <!-- add new page box
+
+    -->
+    </div>
+  </body>
+
+</html>
