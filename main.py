@@ -12,13 +12,20 @@ class MainHandler(webapp2.RequestHandler):
         html = main_template.render()
         self.response.write(html)
 
-class PostCardHandler(webapp2.RequestHandler):
+class PCHandler(webapp2.RequestHandler):
     def get(self):
         post_template = jinja_env.get_template('templates/postcard.html')
         html = post_template.render()
         self.response.write(html)
 
+class SNHandler(webapp2.RequestHandler):
+    def get(self):
+        night_template = jinja_env.get_template('templates/starrynight.html')
+        html = night_template.render()
+        self.response.write(html)
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler), # asking for slash, construct main handlers
-    ('/postcard', PostCardHandler)
+    ('/postcard', PCHandler),
+    ('/starrynight', SNHandler)
 ], debug = True)

@@ -1,0 +1,191 @@
+<html>
+  <head>
+    <title>Starry Night</title>
+
+    <style>
+      html {
+        margin: 0;
+        overflow: hidden;
+      }
+
+      body {
+        margin: 0;
+        background: radial-gradient(farthest-corner at top right,
+          #332556,
+          #100627 50%,
+          #060112 70%);
+      }
+
+      #hill {
+        position: absolute;
+        top: 80%;
+        left: -50%;
+        width: 200%;
+        height: 100%;
+        background: #001503;
+        border-radius: 100%;
+      }
+
+      #telescope {
+        position: absolute;
+        top: 75%;
+        left: 30%;
+        width: 10%;
+        height: auto;
+      }
+
+      /*tooltips*/
+      #moon {
+        position: absolute;
+        top: 5%;
+        left: 85%;
+        width: 10%;
+        height: auto;
+      }
+
+      .stars {
+        position: absolute;
+        width: 3%;
+        height: auto;
+      }
+
+      .image {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: auto;
+      }
+
+      .image + .tooltiptext {
+        visibility: hidden;
+        width: 100px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+
+        position: absolute;   /* Position the tooltip */
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -50%;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+
+      .image:hover + .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+
+      /* Modal Content */
+      .content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 30px;
+        border: 1px solid #888;
+        width: 50%;
+        height: 55%;
+      }
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        position: absolute;
+        top: 11%;
+        left: 75.5%;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="hill"></div>
+
+    <div id="moon">
+      <img class="image" src="../static/moon.png" alt="moon" onclick="window.location.href='/'">
+      <span class="tooltiptext">Return</span>
+    </div>
+
+    <div class="stars" style="top:10%;left:10%;transform:rotate(-20deg);">
+      <img class="image" src="../static/star.png" alt="star" onclick="window.location.href='/'">
+      <span class="tooltiptext" style="transform:rotate(20deg);">Link 1</span>
+    </div>
+
+    <div class="stars" style="top:50%;left:20%;transform:rotate(-20deg);">
+      <img class="image" src="../static/star.png" alt="star" onclick="window.location.href='/'">
+      <span class="tooltiptext" style="transform:rotate(20deg);">Link 2</span>
+    </div>
+
+    <div class="stars" style="top:70%;left:60%;transform:rotate(0deg);">
+      <img class="image" src="../static/star.png" alt="star" onclick="window.location.href='/'">
+      <span class="tooltiptext" style="transform:rotate(0deg);">Link 3</span>
+    </div>
+
+    <div class="stars" style="top:20%;left:50%;transform:rotate(10deg);">
+      <img class="image" src="../static/star.png" alt="star" onclick="window.location.href='/'">
+      <span class="tooltiptext" style="transform:rotate(-10deg);">Link 4</span>
+    </div>
+
+    <div class="stars" style="top:30%;left:70%;transform:rotate(-30deg);">
+      <img class="image" src="../static/star.png" alt="star" onclick="window.location.href='/'">
+      <span class="tooltiptext" style="transform:rotate(30deg);">Link 5</span>
+    </div>
+
+
+    <img id="telescope" src="../static/telescope.png" alt="telescope"> <!-- modal button-->
+
+    <div id="about" class="modal">
+      <span class="close">&times;</span>
+      <div class="content">
+        <p>About u stoopid</p>
+      </div>
+    </div>
+
+
+    <script>
+      var modal = document.getElementById('about');
+      var btn = document.getElementById("telescope");
+      var span = document.getElementsByClassName("close")[0];
+
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
+
+  </body>
+</html>
