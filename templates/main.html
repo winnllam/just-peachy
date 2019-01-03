@@ -27,9 +27,8 @@
       p {font-family: "Arial";}
 
       .pagebox {
-        width: 80%;
-        height: auto;
-        margin: 7%;
+        width: 41%;
+        margin: 25px;
         padding: 25px;
         border: 5px solid black;
         background-color: white;
@@ -48,6 +47,7 @@
         width: 50%;
         height: auto;
         float: right;
+        text-align: left;
       }
       .palette{
         width:auto;
@@ -78,9 +78,10 @@
         color: pink;
       }
       #grid {
-        display:grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px;
+        width: 85%;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        z-index: 10;
       }
 
     </style>
@@ -98,8 +99,7 @@
 
     <h1>Page Designs</h1>
     <p style="text-align:center;">Click on images to see more</p>
-
-    <div id="grid">
+    <center><div id="grid">
       <div class="pagebox">
         <img class="demo" src="../static/Postcard/postcard.png" alt="ex" onclick="window.location.href='/postcard'">
         <div class="text">
@@ -138,7 +138,19 @@
         </div>
       </div>
     -->
-    </div>
+    </div></center>
+
+    <script type="text/javascript" src="http://static.tumblr.com/d0qlne1/DiAl6ekb7/jquery-1.4.2.min.js"></script>
+    <script src="http://static.tumblr.com/twte3d7/H8Glm663z/masonry.js"></script>
+    <script type="text/javascript">
+      $(window).load(function () { // for the tumblr box layout
+        $('#grid').masonry({
+          itemSelector : ".pagebox",
+        },
+        function() { $('#grid').masonry({ appendedContent: $(this) });
+        });
+      });
+    </script>
   </body>
 
 </html>
