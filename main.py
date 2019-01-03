@@ -24,8 +24,15 @@ class SNHandler(webapp2.RequestHandler):
         html = night_template.render()
         self.response.write(html)
 
+class MinHandler(webapp2.RequestHandler):
+    def get(self):
+        min_template = jinja_env.get_template('templates/minimalist.html')
+        html = min_template.render()
+        self.response.write(html)
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler), # asking for slash, construct main handlers
     ('/postcard', PCHandler),
-    ('/starrynight', SNHandler)
+    ('/starrynight', SNHandler),
+    ('/minimalist', MinHandler)
 ], debug = True)
