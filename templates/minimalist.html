@@ -3,11 +3,18 @@
     <title>Minimalist</title>
 
     <style>
-      html {
-        margin: 0;
-        overflow: hidden;
-      }
+      html {margin: 0;}
       body {margin: 0;}
+
+      @font-face { font-family: Codystar; src: url('../static/Codystar/Codystar-Regular.ttf');}
+
+      h1 {
+        color: black;
+        font-family: Codystar;
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 0;
+      }
 
       #destination {
         position: absolute;
@@ -16,14 +23,119 @@
         top: 100px;
         left: 600px;
       }
+
+      /* modal images */
+      .pic {
+        position: absolute;
+        border-radius: 20px;
+        border-style: solid;
+        border-width: 5px;
+        filter: grayscale(75%);
+        cursor: pointer;
+        transition: 0.3s;
+        width: 300px;
+        height: auto;
+      }
+
+      .pic:hover {opacity: 0.7;}
+
+      /* modal interior */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: hidden; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      }
+
+      .modal-content { /*image*/
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 900px;
+      }
+
+      #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+      }
+
+      /* Add Animation - Zoom in the Modal */
+      .modal-content, #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+
+      @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)}
+        to {-webkit-transform:scale(1)}
+      }
+
+      @keyframes zoom {
+        from {transform:scale(0)}
+        to {transform:scale(1)}
+      }
+
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* 100% Image Width on Smaller Screens */
+      @media only screen and (max-width: 700px){
+        .modal-content {
+            width: 100%;
+        }
+      }
     </style>
 
   </head>
 
   <body>
-    <p>hello</p>
-    <br><br> <!-- gets shift down-->
-    <img id="destination" src="../static/mountains.png"> <!-- click to return -->
+    <h1>Safe Travels</h1>
+    <br>
+    <img id="destination" src="../static/minimalist/mountains.png" onclick="window.location.href='/'"> <!-- click to return -->
+
+    <!-- modal -->
+    <img class="pic" style="top:600px;left:250px;" src="../static/minimalist/banff1.jpg" alt="Caption 1">
+    <img class="pic" style="top:400px;left:1100px;" src="../static/minimalist/banff2.jpg" alt="Caption 2">
+    <img class="pic" style="top:250px;left:25px;" src="../static/minimalist/banff3.jpg" alt="Caption 3">
+    <img class="pic" style="top:150px;left:900px;" src="../static/minimalist/banff4.jpg" alt="Caption 4">
+
+    <!-- The Modal -->
+    <div id="box" class="modal">
+      <span class="close" onclick="document.getElementById('box').style.display='none'">&times;</span>
+      <img class="modal-content" id="img">
+      <div id="caption"></div>
+    </div>
+
+
     <svg height="750" width="1250">
       <!-- background path -->
       <path d="M 600 475 q -400 -150 50 -300" stroke="black" stroke-width="5" fill="none" />
@@ -33,9 +145,43 @@
       <path d="M 1100 775 q 350 -150 -250 -300" stroke="black" stroke-width="5" fill="none" />
       <!--M _x position_ _y position_ q _curvature x_ _curvature y_ _right x_ _right y-->
 
-      <!-- img lines -->
+      <!-- img lines --> <!-- more lines for more pics-->
+      <line x1="560" y1="600" x2="900" y2="600" style="stroke:rgb(41,45,52);stroke-width:3" />
+      <circle cx="900" cy="600" r="3" stroke="black" stroke-width="3" fill="black" />
+
+      <line x1="650" y1="450" x2="1100" y2="450" style="stroke:rgb(41,45,52);stroke-width:3" />
+      <circle cx="650" cy="450" r="3" stroke="black" stroke-width="3" fill="black" />
+
+      <line x1="330" y1="325" x2="450" y2="325" style="stroke:rgb(41,45,52);stroke-width:3" />
+      <circle cx="450" cy="325" r="3" stroke="black" stroke-width="3" fill="black" />
+
+      <line x1="600" y1="200" x2="900" y2="200" style="stroke:rgb(41,45,52);stroke-width:3" />
+      <circle cx="600" cy="200" r="3" stroke="black" stroke-width="3" fill="black" />
 
       Sorry, your browser does not support inline SVG.
     </svg>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      var modal = document.getElementById('box');
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = $('.pic');
+      var modalImg = $("#img");
+      var captionText = document.getElementById("caption");
+      $('.pic').click(function(){
+          modal.style.display = "block";
+          var newSrc = this.src;
+          modalImg.attr('src', newSrc);
+          captionText.innerHTML = this.alt;
+      });
+
+      var span = document.getElementsByClassName("close")[0];
+
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
   </body>
 </html>
