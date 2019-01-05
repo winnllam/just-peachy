@@ -30,9 +30,16 @@ class MinHandler(webapp2.RequestHandler):
         html = min_template.render()
         self.response.write(html)
 
+class ChampHandler(webapp2.RequestHandler):
+    def get(self):
+        champ_template = jinja_env.get_template('templates/champion.html')
+        html = champ_template.render()
+        self.response.write(html)
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler), # asking for slash, construct main handlers
     ('/postcard', PCHandler),
     ('/starrynight', SNHandler),
-    ('/minimalist', MinHandler)
+    ('/minimalist', MinHandler),
+    ('/champion', ChampHandler)
 ], debug = True)
