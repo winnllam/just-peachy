@@ -33,6 +33,7 @@
         border: 5px solid black;
         background-color: white;
         box-shadow: 10px 10px grey;
+        float: left;
         overflow: auto;
       }
       .demo { /*page image*/
@@ -83,6 +84,11 @@
         margin-bottom: 25px;
         z-index: 10;
       }
+      #grid:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
 
     </style>
 
@@ -127,7 +133,7 @@
       </div>
 
       <div class="pagebox">
-        <img class="demo" src="../static/minimalist/minimalist.png" alt="ex" onclick="window.location.href='/minimalist'">
+        <img class="demo" src="../static/Minimalist/minimalist.png" alt="ex" onclick="window.location.href='/minimalist'">
         <div class="text">
           <h2>Minimalist</h2>
           <p>Travel pictorial themed page</p>
@@ -152,17 +158,5 @@
     -->
     </div></center>
 
-    <script type="text/javascript" src="http://static.tumblr.com/d0qlne1/DiAl6ekb7/jquery-1.4.2.min.js"></script>
-    <script src="http://static.tumblr.com/twte3d7/H8Glm663z/masonry.js"></script>
-    <script type="text/javascript">
-      $(window).load(function () { // for the tumblr box layout
-        $('#grid').masonry({
-          itemSelector : ".pagebox",
-        },
-        function() { $('#grid').masonry({ appendedContent: $(this) });
-        });
-      });
-    </script>
   </body>
-
 </html>
