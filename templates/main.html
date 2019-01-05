@@ -26,20 +26,32 @@
       }
       p {font-family: "Arial";}
 
+      footer {
+        clear: both;
+        position: relative;
+        height: auto;
+        padding: 15px;
+        font-family: "Trebuchet MS";
+        background-color: rgb(253, 136, 112);
+      }
+
       .pagebox {
-        width: 41%;
+        width: 500px;
+        height: 265px;
         margin: 25px;
         padding: 25px;
         border: 5px solid black;
+        border-radius: 5px;
         background-color: white;
-        box-shadow: 10px 10px grey;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
         float: left;
-        overflow: auto;
+        overflow: hidden;
       }
       .demo { /*page image*/
         width: 45%;
         height: auto;
         float: left;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
       .demo:hover {
         opacity: 0.5;
@@ -53,6 +65,11 @@
       .palette{
         width:auto;
         height: 30px;
+      }
+      .icons {
+        font-size: 30px;
+        margin: 5px;
+        color: black;
       }
 
       #backdrop {
@@ -84,10 +101,12 @@
         margin-bottom: 25px;
         z-index: 10;
       }
-      #grid:after {
-        content: '';
-        display: block;
-        clear: both;
+      #up {
+        position: fixed;
+        top: 95%;
+        left: 95%;
+        font-size: 40px;
+        color: black;
       }
 
     </style>
@@ -95,25 +114,52 @@
   </head>
 
   <body>
+    <a href="#top"><i id="up" class="fas fa-sort-up"></i></a>
+
     <div style="position:relative;">
       <img id="backdrop" src="../static/white.jpg" alt="bg">
       <div id="logo_box">
         <img id="logo" src="../static/logo.png" alt="logo">
       </div>
-      <i id="arrow" class="fas fa-arrow-circle-down"></i>
+      <a href="#top"><i id="arrow" class="fas fa-arrow-circle-down"></i></a>
     </div>
 
-    <h1>Page Designs</h1>
+    <h1 id="top">Page Designs</h1>
     <p style="text-align:center;">Click on images to see more</p>
     <center><div id="grid">
+      <!-- add new page box
       <div class="pagebox">
-        <img class="demo" src="../static/Postcard/postcard.png" alt="ex" onclick="window.location.href='/postcard'">
+        <img class="demo" src="../static/wireframe.png" alt="ex" onclick="window.location.href='/'">
         <div class="text">
-          <h2>Postcard</h2>
+          <h2>TITLE</h2>
           <p>Mail delivery/post card themed page.</p>
-          <p>Profile page or traveller's page with links and text.</p>
-          <p>Colour Palette: <img class="palette" src="../static/palettes/pc-palette.png" alt="palette"></p>
-          <p>Dated <b>12/30/2018</b></p>
+          <p>Great as a profile page or traveller's page.</p>
+          <p>Colour Palette: <img class="palette" src="../static/palettes/palette temp.png" alt="palette"></p>
+          <p>Dated <b>MM/DD/YYYY</b></p>
+        </div>
+      </div>
+    -->
+
+      <div class="pagebox">
+        <img class="demo" src="../static/wireframe.png" alt="ex" onclick="window.location.href='/'">
+        <div class="text">
+          <h2>Champion</h2>
+          <p>Banner/award themed page.</p>
+          <p>Great as a blog styled page.</p>
+          <p>Colour Palette: <img class="palette" src="../static/palettes/palette temp.png" alt="palette"></p>
+          <p>Dated <b>MM/DD/2019</b></p>
+        </div>
+      </div>
+
+      <div class="pagebox">
+        <img class="demo" src="../static/Minimalist/minimalist.png" alt="ex" onclick="window.location.href='/minimalist'">
+        <div class="text">
+          <h2>Minimalist</h2>
+          <p>Travel pictorial themed page.</p>
+          <p>Great as a traveller's page or life path. </p>
+          <p>Click images to expand and the mountain to return.</p>
+          <p>Colour Palette: <img class="palette" src="../static/palettes/m-palette.png" alt="palette"></p>
+          <p>Dated <b>01/05/2019</b></p>
         </div>
       </div>
 
@@ -132,31 +178,54 @@
         </div>
       </div>
 
-      <div class="pagebox">
-        <img class="demo" src="../static/Minimalist/minimalist.png" alt="ex" onclick="window.location.href='/minimalist'">
+      <div class="pagebox" style="margin-bottom:70px;">
+        <img class="demo" src="../static/Postcard/postcard.png" alt="ex" onclick="window.location.href='/postcard'">
         <div class="text">
-          <h2>Minimalist</h2>
-          <p>Travel pictorial themed page</p>
-          <p>Great as a traveller's page or life path.</p>
-          <p>Click images to expand and the mountain to return.</p>
-          <p>Colour Palette: <img class="palette" src="../static/palettes/m-palette.png" alt="palette"></p>
-          <p>Dated <b>01/05/2019</b></p>
+          <h2>Postcard</h2>
+          <p>Mail delivery/post card themed page.</p>
+          <p>Profile page or traveller's page with links and text.</p>
+          <p>Colour Palette: <img class="palette" src="../static/palettes/pc-palette.png" alt="palette"></p>
+          <p>Dated <b>12/30/2018</b></p>
         </div>
       </div>
 
-      <!-- add new page box
-      <div class="pagebox">
-        <img class="demo" src="../static/wireframe.png" alt="ex" onclick="window.location.href='/'">
-        <div class="text">
-          <h2>TITLE</h2>
-          <p>Mail delivery/post card themed page</p>
-          <p>Great as a profile page or traveller's page.</p>
-          <p>Colour Palette: <img class="palette" src="../static/palettes/palette temp.png" alt="palette"></p>
-          <p>Dated <b>MM/DD/YYYY</b></p>
-        </div>
-      </div>
-    -->
     </div></center>
+
+    <footer>
+      Learn more about the creator:
+      <a href="https://winn-profile.appspot.com"><i class="fas fa-user icons"></i></a>
+      <a href="https://www.linkedin.com/in/winnie-lam-3b1309168/"><i class="fab fa-linkedin icons"></i></a>
+      <a href="https://github.com/winnllam"><i class="fab fa-github icons"></i></a>
+      <a href="https://www.instagram.com/winnllam/"><i class="fab fa-instagram icons"></i></a>
+
+    </footer>
+
+    <footer style="background-color:white;padding:3px;font-size:12px;">
+      <i> © 2018 by Winnie Lam </i>; Created with HTML and CSS
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("a").on('click', function(event) { // all links
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+          var hash = this.hash;
+
+          $('html, body').animate({ // animate to add smooth scroll
+            scrollTop: $(hash).offset().top
+          }, 650, function(){ // (800) milliseconds
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+    </script>
 
   </body>
 </html>
