@@ -44,8 +44,8 @@
         border-radius: 5px;
         background-color: white;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-        float: left;
         overflow: hidden;
+        display: inline-block;
       }
       .demo { /*page image*/
         width: 45%;
@@ -97,9 +97,8 @@
       }
       #grid {
         width: 85%;
-        margin-top: 30px;
-        margin-bottom: 25px;
-        z-index: 10;
+        margin: 0 auto;
+        margin-bottom: 70px;
       }
       #up {
         position: fixed;
@@ -126,7 +125,7 @@
 
     <h1 id="top">Page Designs</h1>
     <p style="text-align:center;">Click on images to see more</p>
-    <center><div id="grid">
+    <div id="grid"><center>
       <!-- add new page box
       <div class="pagebox">
         <img class="demo" src="../static/wireframe.png" alt="ex" onclick="window.location.href='/'">
@@ -178,7 +177,7 @@
         </div>
       </div>
 
-      <div class="pagebox" style="margin-bottom:70px;">
+      <div class="pagebox">
         <img class="demo" src="../static/Postcard/postcard.png" alt="ex" onclick="window.location.href='/postcard'">
         <div class="text">
           <h2>Postcard</h2>
@@ -189,7 +188,7 @@
         </div>
       </div>
 
-    </div></center>
+    </center></div>
 
     <footer>
       Learn more about the creator:
