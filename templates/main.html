@@ -8,7 +8,7 @@
     <title>Just-Peachy Page Designs</title>
 
     <style>
-      @font-face { font-family: Staatliches; src: url('../static/Staatliches/Staatliches-Regular.ttf');}
+      @font-face {font-family: Staatliches; src: url('../static/Staatliches/Staatliches-Regular.ttf');}
 
       html {margin: 0;}
       body {margin: 0;}
@@ -25,7 +25,14 @@
         margin: 0;
       }
       p {font-family: "Arial";}
-
+      img {
+        user-drag: none; /*make image not draggable*/
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
       footer {
         clear: both;
         position: relative;
@@ -96,7 +103,6 @@
         color: pink;
       }
       #grid {
-        width: 85%;
         margin: 0 auto;
         margin-bottom: 70px;
       }
@@ -106,6 +112,38 @@
         left: 95%;
         font-size: 40px;
         color: black;
+      }
+
+      /* width less than ___ px;*/
+      @media screen and (max-width: 700px) {
+        #logo_box {
+          width: 100%;
+          height: auto;
+        }
+      }
+      @media screen and (max-width: 600px) {
+      	.pagebox {
+      		width: 425px;
+          height: auto;
+      	}
+        .demo {
+          float: none;
+          width: 100%;
+        }
+        .text {
+          margin-top: 10px;
+          float: none;
+          width: 90%;
+        }
+      }
+      @media screen and (max-width: 525px) {
+        html {
+          -webkit-text-size-adjust: none;
+        }
+        .pagebox {
+      		width: 300px;
+          height: auto;
+      	} /*GET THE IMAGES TO BE ABOVE IT WHEN SMALL NOW! change float*/
       }
 
     </style>
@@ -126,6 +164,7 @@
     <h1 id="top">Page Designs</h1>
     <p style="text-align:center;">Click on images to see more</p>
     <div id="grid"><center>
+
       <!-- add new page box
       <div class="pagebox">
         <img class="demo" src="../static/wireframe.png" alt="ex" onclick="window.location.href='/'">
