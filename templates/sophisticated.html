@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!--bootstrap links-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>Sophisticated</title>
+
+    <style>
+      body {
+        background-image: url("http://66.media.tumblr.com/2fd79c4baa4a9f7643d0baa48b73f33d/tumblr_movdbcThVO1ru3nbdo6_100.png");
+        background-repeat: repeat;
+      }
+      img {
+        user-drag: none; /*make image not draggable*/
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
+
+      /*header image*/
+      #header {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      /*navigation bar*/
+      .nav {
+        background-color: #FFF6CC;
+      }
+      .nav-item {
+        transition: background-color .5s;
+      }
+      .nav-item:hover {
+        background-color: #FFF0AA;
+      }
+      .nav-link {
+        color: black;
+      }
+      .nav-link:hover {
+        color: black;
+      }
+      .sticky {
+        position: sticky;
+        top: 0;
+        width: 100%;
+      }
+
+      /*side boxes*/
+      .sides {
+        width: 200px;
+        height: auto;
+        background-color: #FFF;
+        padding: 10px;
+        margin: 10px;
+        border: 7px solid #E5E5E5;
+        border-radius: 2px;
+        position: fixed;
+        bottom: 10px;
+      }
+
+      /*blog posts*/
+      .posts {
+        width: 500px;
+        height: auto;
+        background-color: white;
+        border: 1.5px solid #E0E0E0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        margin: 20px;
+        text-align: left;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <img id="header" src="../static/Sophisticated/header.jpg" alt="Lake"> <!--header image-->
+
+    <ul id="navi" class="nav justify-content-center"> <!--navigation bar-->
+      <li class="nav-item">
+        <a class="nav-link active" href="/">Return</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+    </ul>
+
+
+    <div class="sides" style="left:10px;"> <!--side box 1-->
+      <p>About MEEE REEE</p>
+      <p>About MEEE REEE</p>
+      <p>About MEEE REEE</p>
+    </div>
+
+    <div class="sides" style="right:10px;"> <!--side box 2-->
+      <p><i>"kick ass quote yeet"</i></p>
+    </div>
+
+    <br>
+    <!-- types: text, quote, photo
+
+  -->
+
+    <center><div>
+      <div class="posts"> <!-- post boxes-->
+        <p>ya yeet</p>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </div>
+
+      <div class="posts"> <!-- post boxes-->
+        <p>ya yeet</p>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </div>
+
+      <div class="posts"> <!-- post boxes-->
+        <p>ya yeet</p>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </div>
+    </div></center>
+
+    <script>
+      window.onscroll = function() {stick()};
+
+      var navbar = document.getElementById("navi");
+      var sticky = navbar.offsetTop;
+
+      function stick() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+    }
+    </script>
+  </body>
+</html>

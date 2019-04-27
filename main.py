@@ -30,10 +30,10 @@ class MinHandler(webapp2.RequestHandler):
         html = min_template.render()
         self.response.write(html)
 
-class ChampHandler(webapp2.RequestHandler):
+class SophHandler(webapp2.RequestHandler):
     def get(self):
-        champ_template = jinja_env.get_template('templates/champion.html')
-        html = champ_template.render()
+        soph_template = jinja_env.get_template('templates/sophisticated.html')
+        html = soph_template.render()
         self.response.write(html)
 
 app = webapp2.WSGIApplication([
@@ -41,5 +41,5 @@ app = webapp2.WSGIApplication([
     ('/postcard', PCHandler),
     ('/starrynight', SNHandler),
     ('/minimalist', MinHandler),
-    ('/champion', ChampHandler)
+    ('/sophisticated', SophHandler)
 ], debug = True)
