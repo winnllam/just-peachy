@@ -32,7 +32,6 @@ class MinHandler(webapp2.RequestHandler):
 
 class SSHandler(webapp2.RequestHandler):
     def get(self):
-        soph_template = jinja_env.get_template('templates/sophisticated.html')
         ss_template = jinja_env.get_template('templates/sunset.html')
         html = ss_template.render()
         self.response.write(html)
