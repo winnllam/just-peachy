@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!--bootstrap links-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>Sunset</title>
+
+    <style>
+      body {
+        background-image: url("http://66.media.tumblr.com/2fd79c4baa4a9f7643d0baa48b73f33d/tumblr_movdbcThVO1ru3nbdo6_100.png");
+        background-repeat: repeat;
+      }
+      @font-face { font-family: Codystar; src: url('../static/Codystar/Codystar-Regular.ttf');}
+      @font-face { font-family: Raleway; src: url('../static/Raleway/Raleway-Regular.ttf');}
+      @font-face { font-family: Raleway_Bold; src: url('../static/Raleway/Raleway-SemiBold.ttf');}
+      @font-face { font-family: Raleway_Blk; src: url('../static/Raleway/Raleway-ExtraBoldItalic.ttf');}
+      h1 {
+        text-align: center;
+        margin-top: 5px;
+        font-family: Codystar;
+        font-size: 25px;
+      }
+      h2 {
+        text-align: center;
+        margin-top: 5px;
+        font-family: Raleway_Blk;
+        font-size: 25px;
+      }
+      p {
+        font-family: Raleway;
+        font-size: 12px;
+        margin: 0px;
+      }
+      b {
+        font-family: Raleway_Bold
+      }
+      img {
+        user-drag: none; /*make image not draggable*/
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
+
+      /*header image*/
+      #header {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      /*navigation bar*/
+      .nav {
+        background-color: #FFF6CC;
+      }
+      .nav-item {
+        transition: background-color .5s;
+      }
+      .nav-item:hover {
+        background-color: #FFF0AA;
+      }
+      .nav-link {
+        font-size: 12px;
+        color: black;
+      }
+      .nav-link:hover {
+        font-size: 12px;
+        color: black;
+      }
+      .sticky {
+        position: sticky;
+        top: 0;
+        width: 100%;
+      }
+
+      /*side boxes*/
+      .sides {
+        width: 200px;
+        height: auto;
+        background-color: #FFF;
+        padding: 15px;
+        margin: 10px;
+        border: 7px solid #E5E5E5;
+        border-radius: 2px;
+        position: fixed;
+        bottom: 10px;
+      }
+      #left {
+        left: 10px;
+      }
+      #right {
+        right: 10px;
+      }
+      #user {
+        max-width: 100px;
+        max-height: 100px;
+        border-radius: 100%;
+      }
+
+      /*blog posts*/
+      .posts {
+        width: 500px;
+        height: auto;
+        background-color: white;
+        border: 1.5px solid #E0E0E0;
+        border-radius: 2px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        margin: 20px;
+        margin-bottom: 30px;
+        text-align: left;
+      }
+      .card-footer {
+        background-color: white;
+        padding: 5px;
+        margin-top: 15px;
+        font-size: 12px;
+        text-align: center;
+      }
+      .photo { /*photo posts*/
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+      }
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: hidden; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      }
+      .modal-content { /*image*/
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 900px;
+      }
+
+      /* width less than ___ px;*/
+      @media screen and (max-width: 975px) {
+        .sides {
+          position: relative;
+          width: 500px;
+        }
+        #left {
+          left: auto;
+          margin: auto;
+          border: 3px solid #E5E5E5;
+        }
+        #right {
+          right: auto;
+          margin: auto;
+          margin-top: -3px;
+          border: 3px solid #E5E5E5;
+        }
+      }
+      @media screen and (max-width: 550px) {
+        html {
+          -webkit-text-size-adjust: none;
+        }
+        .posts {
+          width: 350px;
+        }
+        .sides{
+          width: 350px;
+        }
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <img id="header" src="../static/Sunset/header.jpg" alt="Lake"> <!--header image-->
+
+    <ul id="navi" class="nav justify-content-center"> <!--navigation bar-->
+      <li class="nav-item">
+        <a class="nav-link active" href="/">Return</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+    </ul>
+
+    <br>
+
+    <!--
+    <div class="posts">
+      <h2>TITLE</h2>
+      <p>CONTENT</p>
+
+      <img class="photo" src="" alt="pic">
+      <div id="box" class="modal">
+        <img class="modal-content" id="img">
+      </div>
+
+      <div class="card-footer">
+        <small class="text-muted">Last updated DATE</small>
+      </div>
+    </div>
+  -->
+
+    <center><div>
+
+      <div class="posts"> <!-- post boxes-->
+        <h2>Title Your Content!</h2>
+        <p>This is a text post!</p>
+        <p><i>You can italicize</i> and <b> bold your text.</b></p>
+        <br>
+        <p>Most importantly, you can write whatever you want!</p>
+        <p>Don't forget to date you're posts so you can keep track of your events! </p>
+
+        <div class="card-footer">
+          <small class="text-muted">Last updated Apr 27, 2019</small>
+        </div>
+      </div>
+
+      <div class="posts"> <!-- post boxes-->
+        <h2>Whoa??</h2>
+        <p>Want to share your travel adventures? Include some pictures!</p>
+
+        <img class="photo" src="../static/Minimalist/banff1.jpg" alt="banff">
+        <img class="photo" src="../static/Sunset/sunset.jpg" alt="sunset">
+
+        <div id="box" class="modal">
+          <img class="modal-content" id="img">
+        </div>
+
+        <p>Click to expand pictures!</p>
+
+        <div class="card-footer">
+          <small class="text-muted">Last updated Apr 27, 2019</small>
+        </div>
+      </div>
+
+      <div class="posts"> <!-- post boxes-->
+        <p>Don't forget to check out my <a href="https://winn-profile.appspot.com">profile</a>! 💖💖💖💖</p>
+        <p>Always up for a chat! I don't bite!</p>
+
+        <div class="card-footer">
+          <small class="text-muted">Last updated Apr 27, 2019</small>
+        </div>
+      </div>
+
+    </div></center>
+
+
+    <div id="left" class="sides"> <!--side box 1-->
+      <center><img id="user" src="../static/Sunset/icon.png" alt="user"></center>
+      <h1>About ME</h1>
+      <p>Hi, it's Peachy!</p>
+      <p>I've been coding since 2016.</p>
+      <p>This page is great for blog styled purposes, with post boxes for text and
+        images.</p>
+    </div>
+
+    <div id="right" class="sides"> <!--side box 2-->
+      <h1>Sunset</h1>
+      <p><i>"Every human is an artist. And this is the main art that we have:
+        the creation of our story."</i><b> - Don Miguel Ruiz</b></p>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      window.onscroll = function() {stick()};
+
+      var navbar = document.getElementById("navi");
+      var sticky = navbar.offsetTop;
+
+      function stick() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+      // MODAL
+      var modal = document.getElementById('box');
+      var img = $('.photo');
+      var modalImg = $("#img");
+
+      $('.photo').click(function(){
+          modal.style.display = "block";
+          var newSrc = this.src;
+          modalImg.attr('src', newSrc);
+      });
+
+      window.onclick = function(event) { // click outside modal
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
