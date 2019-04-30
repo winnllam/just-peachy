@@ -36,10 +36,17 @@ class SSHandler(webapp2.RequestHandler):
         html = ss_template.render()
         self.response.write(html)
 
+class OcHandler(webapp2.RequestHandler):
+    def get(self):
+        oc_template = jinja_env.get_template('templates/oceans.html')
+        html = oc_template.render()
+        self.response.write(html)
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler), # asking for slash, construct main handlers
     ('/postcard', PCHandler),
     ('/starrynight', SNHandler),
     ('/minimalist', MinHandler),
-    ('/sunset', SSHandler)
+    ('/sunset', SSHandler),
+    ('/oceans', OcHandler)
 ], debug = True)

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!--bootstrap links-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--jquery link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--isotope link-->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+    <title>Oceans</title>
+
+    <style>
+      html, body {
+        background-image: url('http://static.tumblr.com/a0dmjhi/9dQnnpz7c/tiny_grid.png');
+      }
+
+      @font-face { font-family: Raleway Bold; src: url('../static/Raleway/Raleway-Bold.ttf');}
+      @font-face { font-family: Raleway; src: url('../static/Raleway/Raleway-Regular.ttf');}
+      @font-face {font-family: Alegreya Reg; src: url('../static/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf');}
+      @font-face {font-family: Alegreya Thin; src: url('../static/Alegreya_Sans_SC/AlegreyaSansSC-Thin.ttf');}
+
+      header {
+        background-color: #383737;
+        height: 200px;
+      }
+      h1 {
+        font-family: Raleway Bold;
+        font-size: 50px;
+        text-align: left;
+        color: #2ED3DB;
+        padding: 70px 10px;
+        padding-bottom: 0;
+      }
+      h2 {
+        font-family: Alegreya Reg;
+        font-size: 15px;
+        color: #83E9EE;
+        padding: 0px;
+        margin: 0px;
+      }
+      h3 {
+        color: #08C7D0;
+      }
+      p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+      }
+      button {
+        font-family: Alegreya Thin;
+        border: none;
+        text-decoration: none;
+        margin: 0;
+      }
+
+      /* HEADER */
+      #hd {
+        width: 650px;
+      }
+      #ttl {
+        float: left;
+      }
+      #desc {
+        margin-top: 100px;
+        margin-right: 100px;
+        color: white;
+        float: right;
+      }
+
+      /* SIDE BOXES */
+      #left {
+        width: 200px;
+        height: auto;
+        margin: 30px;
+        padding: 30px;
+        float: left;
+      }
+      .tagbox {
+        background-color: white;
+        width: 210px;
+        height: auto;
+        margin-bottom: 30px;
+      }
+      .taghead {
+        background-color: #383737;
+        text-align: center;
+        padding: 13px;
+      }
+      .tagbody{
+        background-color: #E8E8E8;
+        padding: 20px 30px;
+      }
+      .tags {
+        width: 100%;
+        font-size: 12px;
+        background-color: white;
+        color: black;
+        padding: 5px;
+        margin: 0;
+        transition: background-color .5s;
+      }
+      .tags:hover {
+        background: #019FA6;
+      }
+
+      /*FILTER BOXES*/
+      #right {
+        width: 950px;
+        height: auto;
+        margin: 20px 30px;
+        padding: 20px;
+        float: right;
+      }
+      .card {
+        background-color: white;
+        width: 250px;
+        height: auto;
+        border-radius: 0;
+        padding: 15px;
+        margin: 10px;
+      }
+
+      /*RESIZING*/
+      @media screen and (max-width: 1280px) {
+        #right {
+          width: 850px;
+        }
+      }
+      @media screen and (max-width: 1180px) {
+        #main {
+          width: 90%;
+        }
+        #right {
+          width: 580px;
+        }
+      }
+      @media screen and (max-width: 1000px) {
+        #right {
+          width: 300px;
+        }
+      }
+      @media screen and (max-width: 690px) {
+        #hd {
+          width: 100%;
+          height: auto;
+        }
+        #ttl {
+          float: none;
+        }
+        #desc {
+          text-align: right;
+          float: none;
+          margin: 0 10%;
+        }
+
+        #main {
+          width: 100%;
+        }
+        #left {
+          float: none;
+          padding: 30px 0;
+          margin: auto;
+        }
+        #right {
+          width: 580px;
+          float: none;
+          margin: auto;
+        }
+      }
+      @media screen and (max-width: 570px) {
+        #right {
+          width: 300px;
+        }
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <header><center> <!-- header -->
+      <div id="hd">
+        <div id="ttl"><h1>Oceans.</h1></div>
+        <div id="desc">
+          <p>Listen to the waves.</p>
+        </div>
+      </div>
+    </center></header>
+
+    <div id="main">
+      <div id="left"> <!-- side boxes (tag links) -->
+        <div class="tagbox">
+          <div class="taghead"><h2>links</h2></div>
+          <div class="tagbody">
+            <button class="tags" onclick="window.location.href='/'">return</button>
+            <button class="tags" onclick="window.location.href='https://google.com'">google</button>
+            <button class="tags" onclick="window.location.href='/oceans'">link</button>
+            <button class="tags" onclick="window.location.href='/oceans'">link</button>
+          </div>
+        </div>
+
+        <div class="tagbox">
+          <div class="taghead"><h2>tags</h2></div>
+          <div class="tagbody filters">
+            <button class="tags" data-filter=".card">reset</button>
+            <button class="tags" data-filter=".f">filter</button>
+            <button class="tags" data-filter=".m">message</button>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div id="right"> <!-- filter boxes -->
+        <div class="grid">
+          <div class="card m">
+            <p>visit</p>
+          </div>
+
+          <div class="card f">
+            <h3>Oceans.</h3>
+            <p>A page where you can filter your content using the tags on the side!</p>
+            <p>Featuring uses of isotope and masonry.</p>
+          </div>
+
+          <div class="card f">
+            <h3>Hello.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+          <div class="card">
+            <p>🌊 surf</p>
+            <p>🌊 some</p>
+            <p>🌊 waves</p>
+            <p>🌊 ???</p>
+          </div>
+
+          <div class="card m">
+            <p>my</p>
+          </div>
+
+          <div class="card">
+            <h3>🐢🐢🐢</h3>
+            <p>Save the turtles!</p>
+            <p>Reduce your plastic!</p>
+          </div>
+
+          <div class="card">
+            <h3>🐋🐋🐋</h3>
+            <p>Save the whales!</p>
+            <p>Reduce your plastic!</p>
+          </div>
+
+          <div class="card f">
+            <p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.</i></p>
+          </div>
+
+          <div class="card f">
+            <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.</b></p>
+          </div>
+
+          <div class="card m">
+            <a href="https://winn-profile.appspot.com"><p>profile!</p></a>
+          </div>
+
+          <div class="card m">
+            <h3>💖💖💖💖</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--
+    card template:
+    <div class="card"> (add tags as needed)
+      <h3>TITLE</h3>
+      <p>CONTENT</p>
+    </div>
+
+-->
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // init Isotope
+        var $container = $('.grid').isotope({
+          itemSelector: '.card',
+          layoutMode: 'masonry',
+        });
+        // filter functions
+        var filterFns = {};
+        // bind filter button click
+        $('.filters').on( 'click', 'button', function() {
+          var filterValue = $(this).attr('data-filter');
+          // use filterFn if matches value
+          filterValue = filterFns[ filterValue ] || filterValue;
+          $container.isotope({ filter: filterValue });
+        });
+
+      });
+    </script>
+
+  </body>
+</html>
