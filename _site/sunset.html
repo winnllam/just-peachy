@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!--bootstrap links-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/static/Sunset/sunset.css" type="text/css">
+
+    <title>Sunset</title>
+
+  </head>
+
+  <body>
+    <img id="header" src="../static/Sunset/header.jpg" alt="Lake"> <!--header image-->
+
+    <ul id="navi" class="nav justify-content-center"> <!--navigation bar-->
+      <li class="nav-item">
+        <a class="nav-link active" href="/">Return</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+    </ul>
+
+    <br>
+
+    <!--
+    <div class="posts">
+      <h2>TITLE</h2>
+      <p>CONTENT</p>
+
+      <img class="photo" src="" alt="pic">
+      <div id="box" class="modal">
+        <img class="modal-content" id="img">
+      </div>
+
+      <div class="card-footer">
+        <small class="text-muted">Last updated DATE</small>
+      </div>
+    </div>
+  -->
+
+    <center><div>
+
+      <div class="posts"> <!-- post boxes-->
+        <h2>Title Your Content!</h2>
+        <p>This is a text post!</p>
+        <p><i>You can italicize</i> and <b> bold your text.</b></p>
+        <br>
+        <p>Most importantly, you can write whatever you want!</p>
+        <p>Don't forget to date you're posts so you can keep track of your events! </p>
+
+        <div class="card-footer">
+          <small class="text-muted">Last updated Apr 27, 2019</small>
+        </div>
+      </div>
+
+      <div class="posts"> <!-- post boxes-->
+        <h2>Whoa??</h2>
+        <p>Want to share your travel adventures? Include some pictures!</p>
+
+        <img class="photo" src="../static/Minimalist/banff1.jpg" alt="banff">
+        <img class="photo" src="../static/Sunset/sunset.jpg" alt="sunset">
+
+        <div id="box" class="modal">
+          <img class="modal-content" id="img">
+        </div>
+
+        <p>Click to expand pictures!</p>
+
+        <div class="card-footer">
+          <small class="text-muted">Last updated Apr 27, 2019</small>
+        </div>
+      </div>
+
+      <div class="posts"> <!-- post boxes-->
+        <p>Don't forget to check out my <a href="https://winn-profile.appspot.com">profile</a>! 💖💖💖💖</p>
+        <p>Always up for a chat! I don't bite!</p>
+
+        <div class="card-footer">
+          <small class="text-muted">Last updated Apr 27, 2019</small>
+        </div>
+      </div>
+
+    </div></center>
+
+
+    <div id="left" class="sides"> <!--side box 1-->
+      <center><img id="user" src="../static/Sunset/icon.png" alt="user"></center>
+      <h1>About ME</h1>
+      <p>Hi, it's Peachy!</p>
+      <p>I've been coding since 2016.</p>
+      <p>This page is great for blog styled purposes, with post boxes for text and
+        images.</p>
+    </div>
+
+    <div id="right" class="sides"> <!--side box 2-->
+      <h1>Sunset</h1>
+      <p><i>"Every human is an artist. And this is the main art that we have:
+        the creation of our story."</i><b> - Don Miguel Ruiz</b></p>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      window.onscroll = function() {stick()};
+
+      var navbar = document.getElementById("navi");
+      var sticky = navbar.offsetTop;
+
+      function stick() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+      // MODAL
+      var modal = document.getElementById('box');
+      var img = $('.photo');
+      var modalImg = $("#img");
+
+      $('.photo').click(function(){
+          modal.style.display = "block";
+          var newSrc = this.src;
+          modalImg.attr('src', newSrc);
+      });
+
+      window.onclick = function(event) { // click outside modal
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

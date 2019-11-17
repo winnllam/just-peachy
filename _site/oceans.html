@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!--bootstrap links-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--jquery link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--isotope link-->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+    <link rel="stylesheet" href="/static/Oceans/oceans.css" type="text/css">
+
+    <title>Oceans</title>
+
+  </head>
+
+  <body>
+    <header><center> <!-- header -->
+      <div id="hd">
+        <div id="ttl"><h1>Oceans.</h1></div>
+        <div id="desc">
+          <p>Listen to the waves.</p>
+        </div>
+      </div>
+    </center></header>
+
+    <div id="main">
+      <div id="left"> <!-- side boxes (tag links) -->
+        <div class="tagbox">
+          <div class="taghead"><h2>links</h2></div>
+          <div class="tagbody">
+            <button class="tags" onclick="window.location.href='/'">return</button>
+            <button class="tags" onclick="window.location.href='https://google.com'">google</button>
+            <button class="tags" onclick="window.location.href='/oceans'">link</button>
+            <button class="tags" onclick="window.location.href='/oceans'">link</button>
+          </div>
+        </div>
+
+        <div class="tagbox">
+          <div class="taghead"><h2>tags</h2></div>
+          <div class="tagbody filters">
+            <button class="tags" data-filter=".card">reset</button>
+            <button class="tags" data-filter=".f">filter</button>
+            <button class="tags" data-filter=".m">message</button>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div id="right"> <!-- filter boxes -->
+        <div class="grid">
+          <div class="card m">
+            <p>visit</p>
+          </div>
+
+          <div class="card f">
+            <h3>Oceans.</h3>
+            <p>A page where you can filter your content using the tags on the side!</p>
+            <p>Featuring uses of isotope and masonry.</p>
+          </div>
+
+          <div class="card f">
+            <h3>Hello.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+          <div class="card">
+            <p>🌊 surf</p>
+            <p>🌊 some</p>
+            <p>🌊 waves</p>
+            <p>🌊 ???</p>
+          </div>
+
+          <div class="card m">
+            <p>my</p>
+          </div>
+
+          <div class="card">
+            <h3>🐢🐢🐢</h3>
+            <p>Save the turtles!</p>
+            <p>Reduce your plastic!</p>
+          </div>
+
+          <div class="card">
+            <h3>🐋🐋🐋</h3>
+            <p>Save the whales!</p>
+            <p>Reduce your plastic!</p>
+          </div>
+
+          <div class="card f">
+            <p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.</i></p>
+          </div>
+
+          <div class="card f">
+            <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.</b></p>
+          </div>
+
+          <div class="card m">
+            <a href="https://winn-profile.appspot.com"><p>profile!</p></a>
+          </div>
+
+          <div class="card m">
+            <h3>💖💖💖💖</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--
+    card template:
+    <div class="card"> (add tags as needed)
+      <h3>TITLE</h3>
+      <p>CONTENT</p>
+    </div>
+
+-->
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // init Isotope
+        var $container = $('.grid').isotope({
+          itemSelector: '.card',
+          layoutMode: 'masonry',
+        });
+        // filter functions
+        var filterFns = {};
+        // bind filter button click
+        $('.filters').on( 'click', 'button', function() {
+          var filterValue = $(this).attr('data-filter');
+          // use filterFn if matches value
+          filterValue = filterFns[ filterValue ] || filterValue;
+          $container.isotope({ filter: filterValue });
+        });
+
+      });
+    </script>
+
+  </body>
+</html>
