@@ -1,38 +1,38 @@
 <html>
-  <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="manifest" href="icons/site.webmanifest">
+  <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="static/main.css" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
 
-    <title>Just-Peachy Page Designs</title>
+  <link rel="stylesheet" href="static/main.css" type="text/css">
 
-  </head>
+  <title>Just-Peachy Page Designs</title>
 
-  <body>
-    <a href="#top"><i id="up" class="fas fa-sort-up"></i></a>
+</head>
 
-    <div style="position:relative;">
-      <img id="backdrop" src="static/white.jpg" alt="bg">
-      <div id="logo_box">
-        <img id="logo" src="static/logo.png" alt="logo">
-      </div>
-      <a href="#top"><i id="arrow" class="fas fa-arrow-circle-down"></i></a>
+<body>
+  <a href="#top"><i id="up" class="fas fa-sort-up"></i></a>
+
+  <div style="position:relative;">
+    <img id="backdrop" src="static/white.jpg" alt="bg">
+    <div id="logo_box">
+      <img id="logo" src="static/logo.png" alt="logo">
     </div>
+    <a href="#top"><i id="arrow" class="fas fa-arrow-circle-down"></i></a>
+  </div>
 
-    <h1 id="top">Page Designs</h1>
-    <p style="text-align:center;">Click on images to see more \\ Best viewed on desktop</p>
-    <div id="grid"><center>
+  <h1 id="top">Page Designs</h1>
+  <p style="text-align:center;">Click on images to see more \\ Best viewed on desktop</p>
+  <div id="grid">
+    <center>
 
       <!-- add new page box
       <div class="pagebox">
@@ -118,25 +118,27 @@
         </div>
       </div>
 
-    </center></div>
+    </center>
+  </div>
 
-    <footer>
-      Learn more about the creator:
-      <a href="https://winnllam.github.io"><i class="fas fa-user icons"></i></a>
-      <a href="https://www.linkedin.com/in/winnie-lam-3b1309168/"><i class="fab fa-linkedin icons"></i></a>
-      <a href="https://github.com/winnllam"><i class="fab fa-github icons"></i></a>
-      <a href="https://www.instagram.com/winnllam/"><i class="fab fa-instagram icons"></i></a>
+  <footer>
+    <hr>
+    Learn more about the creator:
+    <a href="https://winnllam.github.io"><i class="fas fa-user icons"></i></a>
+    <a href="https://www.linkedin.com/in/winnie-lam-3b1309168/"><i class="fab fa-linkedin icons"></i></a>
+    <a href="https://github.com/winnllam"><i class="fab fa-github icons"></i></a>
+    <a href="https://www.instagram.com/winnllam/"><i class="fab fa-instagram icons"></i></a>
 
-    </footer>
+  </footer>
 
-    <footer style="background-color:white;padding:3px;font-size:12px;">
-      <i> © 2018 by Winnie Lam </i>; Created with HTML and CSS
-    </footer>
+  <footer style="background-color:white;padding:3px;font-size:12px;">
+    <i> © 2018 by Winnie Lam </i>; Created with HTML and CSS
+  </footer>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
       $("a").on('click', function(event) { // all links
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
@@ -146,7 +148,7 @@
 
           $('html, body').animate({ // animate to add smooth scroll
             scrollTop: $(hash).offset().top
-          }, 650, function(){ // (800) milliseconds
+          }, 650, function() { // (800) milliseconds
 
             // Add hash (#) to URL when done scrolling (default click behavior)
             window.location.hash = hash;
@@ -154,7 +156,8 @@
         }
       });
     });
-    </script>
+  </script>
 
-  </body>
+</body>
+
 </html>
