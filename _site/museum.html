@@ -33,62 +33,77 @@
   <div id="container">
     <center>
       <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="static/Museum/architecture.jpeg" class="card-img-top" alt="architecture">
         <div class="card-body">
           <h5 class="card-title">Location</h5>
           <p class="card-text">Description</p>
-          <button type="button" class="btn btn-link">#tag</button>
-          <br>
-          <a href="#" class="btn btn-primary">View</a>
+          <button type="button" class="btn btn-link">#architecture</button>
         </div>
       </div>
 
       <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="static/Museum/ice.jpg" class="card-img-top" alt="ice">
         <div class="card-body">
           <h5 class="card-title">Location</h5>
           <p class="card-text">Description</p>
-          <button type="button" class="btn btn-link">#tag</button>
-          <br>
-          <a href="#" class="btn btn-primary">View</a>
+          <button type="button" class="btn btn-link">#scenery</button>
+          <button type="button" class="btn btn-link">#sky</button>
         </div>
       </div>
 
       <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="static/Museum/night.jpg" class="card-img-top" alt="night">
         <div class="card-body">
           <h5 class="card-title">Location</h5>
           <p class="card-text">Description</p>
-          <button type="button" class="btn btn-link">#tag</button>
-          <br>
-          <a href="#" class="btn btn-primary">View</a>
+          <button type="button" class="btn btn-link">#night</button>
+          <button type="button" class="btn btn-link">#scenery</button>
         </div>
       </div>
 
       <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="static/Museum/path.jpg" class="card-img-top" alt="path">
         <div class="card-body">
           <h5 class="card-title">Location</h5>
           <p class="card-text">Description</p>
-          <button type="button" class="btn btn-link">#tag</button>
-          <br>
-          <a href="#" class="btn btn-primary">View</a>
+          <button type="button" class="btn btn-link">#scenery</button>
+          <button type="button" class="btn btn-link">#green</button>
         </div>
       </div>
 
       <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="static/Museum/sky.jpg" class="card-img-top" alt="sky">
         <div class="card-body">
           <h5 class="card-title">Location</h5>
           <p class="card-text">Description</p>
-          <button type="button" class="btn btn-link">#tag</button>
-          <br>
-          <a href="#" class="btn btn-primary">View</a>
+          <button type="button" class="btn btn-link">#sky</button>
         </div>
+      </div>
+
+      <div id="box" class="modal">
+        <img class="modal-content" id="img">
       </div>
 
     </center>
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    var modal = document.getElementById('box');
+    var img = $('.card-img-top');
+    var modalImg = $("#img");
+    $('.card-img-top').click(function() {
+      modal.style.display = "block";
+      var newSrc = this.src;
+      modalImg.attr('src', newSrc);
+    });
+
+    window.onclick = function(event) { // click outside modal
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 
 </body>
 
