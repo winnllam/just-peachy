@@ -1,0 +1,77 @@
+<html>
+
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="manifest" href="icons/site.webmanifest">
+  <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="static/Starry Night/starry.css" type="text/css">
+
+  <title>Starry Night</title>
+</head>
+
+<body>
+  <img style="opacity:0.35; width:auto; height:100%;" src="static/Starry Night/galaxy.png" alt="galaxy">
+
+  <div id="hill"></div>
+
+  <div id="moon">
+    <img class="image" src="static/Starry Night/moon.png" alt="moon" onclick="window.location.href='../index.html'">
+    <span class="tooltiptext">Return</span>
+  </div>
+
+  <div class="stars" style="top:10%;left:10%;transform:rotate(-20deg);">
+    <img class="image" src="static/Starry Night/star.png" alt="star" onclick="window.location.href='../index.html'">
+    <span class="tooltiptext" style="transform:rotate(20deg);">Link 1</span>
+  </div>
+
+  <div class="stars" style="top:50%;left:20%;transform:rotate(-20deg);">
+    <img class="image" src="static/Starry Night/star.png" alt="star" onclick="window.location.href='../index.html'">
+    <span class="tooltiptext" style="transform:rotate(20deg);">Link 2</span>
+  </div>
+
+  <div class="stars" style="top:70%;left:60%;transform:rotate(0deg);">
+    <img class="image" src="static/Starry Night/star.png" alt="star" onclick="window.location.href='../index.html'">
+    <span class="tooltiptext" style="transform:rotate(0deg);">Link 3</span>
+  </div>
+
+  <div class="stars" style="top:20%;left:50%;transform:rotate(10deg);">
+    <img class="image" src="static/Starry Night/star.png" alt="star" onclick="window.location.href='../index.html'">
+    <span class="tooltiptext" style="transform:rotate(-10deg);">Link 4</span>
+  </div>
+
+  <div class="stars" style="top:30%;left:70%;transform:rotate(-30deg);">
+    <img class="image" src="static/Starry Night/star.png" alt="star" onclick="window.location.href='../index.html'">
+    <span class="tooltiptext" style="transform:rotate(30deg);">Link 5</span>
+  </div>
+
+
+  <img id="telescope" src="static/Starry Night/telescope.png" alt="telescope">
+  <!--modal button-->
+
+  <div id="about" class="modal">
+    <span class="close">&times;</span>
+    <div class="content">
+      <h1>Observatory</h1>
+      <p>A links page using the stars featuring an observatory <br>
+        for extra text.</p>
+      <p>Great for people interested in astronomy and <br>
+        the night skies.</p>
+      <ul style="text-align:left;">
+        <p>Features:</p>
+        <li> stars (5 links, more can be added)</li>
+        <li> moon (return button)</li>
+        <li> observatory (click telescope for details)</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="dynamic/starrynight.js"></script>
+
+</body>
+
+</html>

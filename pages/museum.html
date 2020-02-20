@@ -1,0 +1,95 @@
+<html>
+
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="manifest" href="icons/site.webmanifest">
+  <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/Museum/museum.css" type="text/css">
+
+  <title>Museum</title>
+
+</head>
+
+<body>
+  <h1>Museum</h1>
+
+  <div id="filters">
+    <center>
+      <button type="button" class="btn btn-link">#sky</button>
+      <button type="button" class="btn btn-link">#night</button>
+      <button type="button" class="btn btn-link">#scenery</button>
+      <button type="button" class="btn btn-link">#architecture</button>
+      <button type="button" class="btn btn-link">#green</button>
+      <button type="button" class="btn btn-light">Clear</button>
+    </center>
+  </div>
+
+  <div id="container">
+    <center>
+      <div class="card" style="width: 18rem;">
+        <img src="static/Museum/architecture.jpeg" class="card-img-top" alt="architecture">
+        <div class="card-body">
+          <h5 class="card-title">Location</h5>
+          <p class="card-text">Description</p>
+          <button type="button" class="btn btn-link">#architecture</button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="static/Museum/ice.jpg" class="card-img-top" alt="ice">
+        <div class="card-body">
+          <h5 class="card-title">Location</h5>
+          <p class="card-text">Description</p>
+          <button type="button" class="btn btn-link">#scenery</button>
+          <button type="button" class="btn btn-link">#sky</button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="static/Museum/night.jpg" class="card-img-top" alt="night">
+        <div class="card-body">
+          <h5 class="card-title">Location</h5>
+          <p class="card-text">Description</p>
+          <button type="button" class="btn btn-link">#night</button>
+          <button type="button" class="btn btn-link">#scenery</button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="static/Museum/path.jpg" class="card-img-top" alt="path">
+        <div class="card-body">
+          <h5 class="card-title">Location</h5>
+          <p class="card-text">Description</p>
+          <button type="button" class="btn btn-link">#scenery</button>
+          <button type="button" class="btn btn-link">#green</button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="static/Museum/sky.jpg" class="card-img-top" alt="sky">
+        <div class="card-body">
+          <h5 class="card-title">Location</h5>
+          <p class="card-text">Description</p>
+          <button type="button" class="btn btn-link">#sky</button>
+        </div>
+      </div>
+
+      <div id="box" class="modal">
+        <img class="modal-content" id="img">
+      </div>
+
+    </center>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="dynamic/museum.js"></script>
+
+</body>
+
+</html>
