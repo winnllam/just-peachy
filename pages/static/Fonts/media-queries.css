@@ -1,0 +1,108 @@
+@media screen and (max-width: 1050px) {
+	.modal-content {
+		width: 700px;
+	}
+}
+
+/* width less than 980 px */
+@media screen and (max-width: 980px) {
+  /*ABOUT*/
+	#about {
+		width: 95%;
+	}
+
+	#info {
+		width: 50%;
+		padding: 3% 4%;
+	}
+
+	#me {
+		width: 40%;
+	}
+
+	#me .widget {
+		padding: 8% 7%;
+		margin-bottom: 10px;
+	}
+
+	.projbox {
+		width: 675px;
+	}
+
+	.pimages {
+		width: 100%;
+		float: none;
+	}
+}
+
+@media screen and (max-width: 855px) {
+	.modal-content {
+		width: 400px;
+	}
+	.imgbox {
+		overflow: auto;
+	}
+	.imgleft {
+		float: none;
+		width: 100%;
+	}
+	.imgright {
+		float: none;
+		width: 100%;
+	}
+}
+
+/* width less than 650 px;*/
+@media screen and (max-width: 700px) {
+  /*TITLE*/
+  h4 {
+    font-size: 100px;
+  }
+
+  #position {
+    font-size: 20px;
+  }
+
+  /*ABOUT*/
+	#info {
+		width: 100%;
+		float: none;
+		margin: 0;
+	}
+
+	#me {
+		width: 100%;
+		float: none;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+
+	/*PROJECTS*/
+	.projbox {
+		width: 490px;
+	}
+
+	.pimages {
+		width: 100%;
+		float: none;
+	}
+
+  /* CONTACT */
+  textarea{
+    width: 95%;
+  }
+
+  #name, #email {
+    width: 70%;
+  }
+
+}
+
+/* width less than 480 px */
+@media screen and (max-width: 480px) {
+
+	html {
+		-webkit-text-size-adjust: none;
+	}
+
+}
