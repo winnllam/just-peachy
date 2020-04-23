@@ -1,6 +1,6 @@
 @font-face {
   font-family: Staatliches;
-  src: url('./../pages/static/Fonts/Staatliches/Staatliches-Regular.ttf');
+  src: url("./../pages/static/Fonts/Staatliches/Staatliches-Regular.ttf");
 }
 
 html {
@@ -50,23 +50,23 @@ footer {
 .pagebox {
   width: 300px;
   height: 425px;
-  margin-bottom: 25px;
+  margin: 35px;
   padding: 25px;
   border: 1px solid white;
   border-radius: 5px;
   overflow: hidden;
   display: inline-block;
-  transition: color 1s;
+  transition: 0.25s;
 }
 
 .pagebox:hover {
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
   border: 1px solid black;
 }
 
 .demo {
   /*page image*/
-  width: 90%;
+  width: 100%;
   height: auto;
 }
 
@@ -86,7 +86,7 @@ footer {
   font-size: 25px;
   margin: 5px;
   color: black;
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 .icons:hover {
@@ -124,7 +124,8 @@ footer {
   align-items: center;
   margin: 0 5%;
   padding: 0 5%;
-  column-count: 3;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #up {

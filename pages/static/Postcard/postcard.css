@@ -8,9 +8,18 @@ body {
   background-repeat: repeat;
 }
 
-@font-face { font-family: Codystar; src: url('../Fonts/Codystar/Codystar-Regular.ttf');}
-@font-face { font-family: DancingScript; src: url('../Fonts/Dancing_Script/DancingScript-Regular.ttf');}
-@font-face { font-family: Caveat; src: url('../Fonts/Caveat/Caveat-Regular.ttf');}
+@font-face {
+  font-family: Codystar;
+  src: url("../Fonts/Codystar/Codystar-Regular.ttf");
+}
+@font-face {
+  font-family: DancingScript;
+  src: url("../Fonts/Dancing_Script/DancingScript-Regular.ttf");
+}
+@font-face {
+  font-family: Caveat;
+  src: url("../Fonts/Caveat/Caveat-Regular.ttf");
+}
 
 h1 {
   font-family: Codystar;
@@ -37,7 +46,8 @@ img {
   -ms-user-select: none;
 }
 
-#main { /*post card*/
+#main {
+  /*post card*/
   width: 850px;
   height: 475px;
   border: 2px solid gray;
@@ -47,23 +57,25 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   overflow: auto;
   overflow-x: hidden;
 }
 
-#address { /*right side bar*/
+#address {
+  /*right side bar*/
   position: absolute;
   margin: 0;
   left: 650px;
   width: 200px;
   height: 100%;
-  background-color: #D8F1FF;
+  background-color: #d8f1ff;
   text-align: center;
   overflow: block;
 }
 
-#pic { /*user image*/
+#pic {
+  /*user image*/
   width: 135px;
   height: auto;
   margin: 30px 32px;
@@ -72,7 +84,7 @@ img {
 }
 
 .links {
-  background-color: #A3DDFC;
+  background-color: #a3ddfc;
   height: 25px;
   width: 100px;
   border: dotted 2px;
@@ -91,7 +103,7 @@ img {
   width: 610px;
   height: 60px;
   padding: 20px;
-  background-color: #EEFEFF;
+  background-color: #eefeff;
   overflow: block;
   text-align: center;
 }
@@ -102,8 +114,8 @@ img {
   width: 550px;
   height: 275px;
   padding: 50px;
-  background-color: #EEFEFF;
-  overflow: scroll;
+  background-color: #eefeff;
+  overflow: auto;
 }
 
 .cloud {
